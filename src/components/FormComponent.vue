@@ -1,11 +1,11 @@
 <template>
   <div>
     <form action="">
-      <input type="text" placeholder="Nome">
+      <input type="text" v-model="userData.user" placeholder="Nome">
       <hr>
-      <input type="email" placeholder="E-mail">
+      <input type="email" v-model="userData.email" placeholder="E-mail">
       <hr>
-      <input type="number" placeholder="Idade">
+      <input type="number" v-model="userData.age" placeholder="Idade">
       <hr>
       <input type="radio" name="" id="">Masculino  |
       <input type="radio" name="" id="">Feminino
@@ -30,7 +30,15 @@
 export default {
   data(){
     return{
-
+      userData: {
+        user: null,
+        email: null,
+        age: null,
+        sex: null,
+        province: null,
+      },
+      terms: true,
+      desc: null,
     }
   },
 }
